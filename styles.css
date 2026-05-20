@@ -1,0 +1,107 @@
+/* using a best practices approach */
+/* understand html vs body, but sometimes whether something should
+go in html or body is not clear to me */
+/* going to ignore further typography for now until I learn it */
+
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    /* border: 1px solid red; /* for debugging purposes */
+}
+
+body {
+    margin: 0;
+    height: 100dvh; /* don't understand this honestly */
+    font-family: "Google Sans", sans-serif;
+    font-size: 1rem;  
+    font-weight: 500;
+    line-height: 1.6; 
+    color: #517b49;
+}
+
+main {
+    max-width: 60ch;
+    background-color: #cfe9cb;
+    margin: 0 auto;
+    padding: 6rem;
+    height: 90%;
+}
+
+footer {
+    font-size: 0.6rem;
+    color:#3b3e3a;
+    bottom: 2rem;
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+
+h1, h2{
+    text-align: center;
+    font-family: "EB Garamond", serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    margin: 0;
+    text-align: justify;
+    margin-bottom: 6px;
+}
+
+p::first-letter {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.links{
+    padding: 0;
+    list-style: none;
+}
+
+.links li {
+    margin-bottom: 0.5rem;
+}
+
+header ul {
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+header {
+    position: relative;
+    display: box;
+}
+
+/* I couldn't set it right */
+
+header nav {
+    position: absolute;
+    top: 8rem;
+}
+
+a {
+    color:#3b3e3a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #517b49;
+    text-decoration: underline;
+}
