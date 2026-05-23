@@ -1,202 +1,176 @@
 html {
-    font-size: 20px;
-    box-sizing: border-box;
+    box-sizing:border-box;
+    background-color: white;
+    height: 100%;
 }
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: inherit;
 }
 
-#my-name {
-    font-family: 'Zen Maru Gothic', sans-serif;
-    letter-spacing: -0.2ch;
-    font-size: 0.84rem;
-    font-weight: 700;
-    padding-right:0.1ch;
-}
-
 body {
-    width: 50ch;
-    margin: 0 auto;
-    height: 100dvh;
-    color: white;
-}
-main {
-    padding: 8rem 4rem;
     min-height: 100%;
-    background-color: #F34A4A; 
-}
-
-#banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    display: grid;
+    grid-template-rows:4rem 1fr 1rem;
+    max-width: 55ch;
     margin: 0 auto;
-    height: 4rem;
-    text-align: center;
-    font-size: 4rem;
-    font-family: 'Zen Maru Gothic', sans-serif;
-    color: #ffffff;
-    font-weight: 700;
-    background-color: #F34A4A;
+    padding: 2rem 0;
+    background-color: #1e6b7c;
+    color: white;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4rem;
+    background-image: url(./blossom.png);
+    background-size: 800px;
+    background-position: top left;
+    background-repeat: no-repeat;
 }
 
-@media (max-width: 700px) {
+@media all and (max-width: 600px) {
     body {
-        width: 100%;
+        min-width: 100%;
     }
-    embed {
-        width: 80vw;
-    }
-    main {
-        padding: 4rem 2rem;
-    }
-    #banner {
-        left:unset;
-        right: -4rem;
-        font-size: 2rem;
-    }
-}
-
-
-p {
-    text-align: justify;
-    line-height: 1.25;
-    margin-bottom: 0.6rem;
-}
+} 
 
 #topic {
-    margin-top: 2rem;
-    font-family: 'EB Garamond', serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
+    font-family: 'Instrument serif', serif;
+    font-weight: 300;
+    font-size: 2.6rem;
+}
+
+#asu {
+    font-family: 'Instrument serif', serif;
+    font-weight: 300;
+    font-size: 2.6rem;
+    display: grid;
+    grid-template-columns: 1.68fr 0.1fr 1fr;
+}
+#asu em{
+    font-size: 4.2rem;
+    align-self:center;
+    background: radial-gradient(circle, black 30%, #FFFFFF43 60%, #FFFFFF00 70%), 
+            repeating-conic-gradient(#00000088 0deg 1deg, transparent 1deg 3deg);
+    border-radius: 50%;
+
+    /*
+    background-image: radial-gradient(circle, black 20%,#FFFFFF43 50%, #FFFFFF00 70%);*/
+    margin-top: 0.4rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.6rem;
+}
+
+@media all and (max-width: 600px) {
+    #asu, #asu em {
+        font-size: 6vw;
+        display: inline-block;
+    }
+
 }
 
 #topic::before {
     content: "#";
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
     margin-left: -1.2ch;
     padding-right: 0.2ch;
-
-    color:#ffffffc4;
+    color: #FFFFFFaa;
 }
+
 
 #subtopic {
     font-family: 'EB Garamond', serif;
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 #subtopic::before {
     content: "##";
     margin-left: -2.2ch;
     padding-right: 0.2ch;
-    letter-spacing: -0.1ch;
-    color:#ffffffc4;
+    color: #FFFFFFaa;
 }
 
-p {
-    font-family: 'Newsreader', serif;
+
+
+#my-name {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: medium;
+    font-size: 1.1rem;
+    letter-spacing: -0.3ch;
+    padding-right: 0.2ch;
+}
+
+#banner {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+#banner::after, #banner::before {
+    content: "\2014";
+    padding: 5px;
+}
+
+main {
+    margin: 5rem 4rem;
+}
+
+main p {
+    line-height: 1.16;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+footer {
+    justify-self: right;
+    margin-right: 2rem;
     font-size: 1rem;
-    font-weight: 400;
 }
 
-
-a {
-    font-family: 'Baskervville SC', serif;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 0.2ch;
-    color: #F34A4A;
-    padding: 2px;
-    font-size: 0.95rem;
-}
-
-.contact-link {
-    font-size: 0.96rem;
-    color: #ffffff;
-    font-weight: 500;
-}
-
-a:hover {
-    transition: background-color 0.15s ease;
-        background-color: #ffdfdf;
-}
-
-.contact-link:hover {
-    transition: background-color 0.15s ease;
-    background-color: #901a1a;
-}
-
-header ul {
+li {
     list-style: none;
 }
 
-header {
-    position: fixed;
-    top: 12.68rem;
-    left: 18vw;
-    z-index: 100;
-}
-
-@media all and (min-width: 1600px) {
-    header {
-        left: 22vw;
-    }
-}
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-    header {
-        left: 12vw;
-    }
-}
-
-@media (max-width: 1200px) {
-    header {
-        top: 1rem;
-        left: 2rem;
-    }
-    a {
-        color: white;
-    }
-
-    a:hover {
-        transition: background-color 0.15s ease;
-        background-color: #901a1a;
-    }
-}
-
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-    font-weight: 500;
+a {
+    text-decoration: none;
     color: white;
-    background-color: #F34A4A;
+    font-weight: 600;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media all and (max-width: 600px) {
+    ul {
+        transition: gap 0.15s ease;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+
+a:hover {
+    transition: background-color 0.15s ease;
+    background-color:rgb(95, 165, 165);
+}
+
+embed {
     width: 100%;
-
+    border-radius: 4%;
 }
-
-footer p {
-    font-family: 'Newsreader', serif;
-    font-size: 0.7rem;
-    text-align: right;
-    padding: 1rem 4rem;
-}
-
-footer p::before {
-    content: "\2014";
-    padding-right: 1px;
-}
-
-
-#banner::before, #banner::after {
-  content: "\2014";
-  padding-right: 5px;
-}
-
