@@ -17,7 +17,7 @@ body {
     max-width: 55ch;
     margin: 0 auto;
     padding: 2rem 0;
-    background-color: #1e6b7c;
+    background-color: #85b6c1; /* previously: #1e6b7c;*/
     color: white;
     font-family: 'EB Garamond', serif;
     font-size: 1.4rem;
